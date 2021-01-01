@@ -4,4 +4,4 @@
 
 Remake inspired by Tomas Skarba:
 
-<img src="https://cdn.dribbble.com/users/835462/screenshots/3550576/event-app-dribble-800x600-gif.gif" />
+<img src="https://cdn.dribbble.com/users/835462/screenshots/3548344/cinema_mobile_app_800x600.png?compress=1&resize=800x600" />
