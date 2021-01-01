@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itm_search"
+        android:enabled="true"
+        android:icon="@drawable/sl_search"
+        android:title="Search"/>
+
+    <item
+        android:id="@+id/itm_fav"
+        android:enabled="true"
+        android:icon="@drawable/sl_fav"
+        android:title="Favorites" />
+
+    <item
+        android:id="@+id/itm_add"
+        android:enabled="true"
+        android:icon="@drawable/ic_add"
+        android:title="Add" />
+
+    <item
+        android:id="@+id/itm_notif"
+        android:enabled="true"
+        android:icon="@drawable/sl_notif"
+        android:title="Notifications" />
+
+    <item
+        android:id="@+id/itm_settings"
+        android:enabled="true"
+        android:icon="@drawable/sl_settings"
+        android:title="Settings" />
+
+</menu>

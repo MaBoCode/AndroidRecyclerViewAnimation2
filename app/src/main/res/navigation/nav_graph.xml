@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="fr.example.androidrecyclerviewanimation2.MainFragment"
+        android:label="frg_main"
+        tools:layout="@layout/frg_main" >
+        <action
+            android:id="@+id/to_movie_pager_fragment"
+            app:destination="@id/moviePagerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/moviePagerFragment"
+        android:name="fr.example.androidrecyclerviewanimation2.MoviePagerFragment"
+        android:label="frg_movie_pager"
+        tools:layout="@layout/frg_movie_pager" >
+
+        <argument
+            android:name="currentItemId"
+            app:nullable="false"
+            app:argType="long" />
+
+        <argument
+            android:name="movies"
+            app:nullable="false"
+            app:argType=".Movie[]" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="fr.example.androidrecyclerviewanimation2.MovieFragment"
+        android:label="frg_movie"
+        tools:layout="@layout/frg_movie" >
+
+        <argument
+            android:name="movie"
+            android:defaultValue="@null"
+            app:nullable="true"
+            app:argType=".Movie" />
+
+    </fragment>
+</navigation>

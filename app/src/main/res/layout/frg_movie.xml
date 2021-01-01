@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <data>
+        <variable
+            name="movie"
+            type="fr.example.androidrecyclerviewanimation2.Movie" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyMovieFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MovieFragment" >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="16dp"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.8"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.7"
+            android:orientation="horizontal" />
+
+        <ImageView
+            android:id="@+id/imgMoviePoster"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@{movie.poster}"
+            android:scaleType="centerCrop"
+            android:foreground="@drawable/bg_image_filter"
+            android:transitionName="movie_item_img_transition"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/txtMovieType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:textColor="?attr/colorOnPrimarySurface"
+            android:textAppearance="?attr/textAppearanceHeadline1"
+            android:textSize="28sp"
+            android:textAllCaps="true"
+            android:text="@{movie.type}"
+            android:transitionName="movie_item_type_transition"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintBottom_toTopOf="@id/txtMovieTitle"/>
+
+        <TextView
+            android:id="@+id/txtMovieTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:textColor="?attr/colorOnPrimarySurface"
+            android:textAppearance="?attr/textAppearanceHeadline4"
+            android:textAllCaps="true"
+            android:text="@{movie.title}"
+            android:textStyle="bold"
+            android:transitionName="movie_item_title_transition"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineBottom" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
